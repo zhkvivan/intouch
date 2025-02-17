@@ -9,7 +9,9 @@
     --foreground: #ededed;
   }
 }
-
+body {
+  padding: 2rem;
+}
 html,
 body {
   max-width: 100vw;
