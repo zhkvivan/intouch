@@ -9,22 +9,6 @@ const StyledDailyBonds = styled.div`
   padding: 1rem;
 `;
 
-const Header = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-`;
-
-const Heading = styled.h1`
-  font-size: 2rem;
-  font-weight: 700;
-`;
-
-const SubHeading = styled.h2`
-  font-size: 1.5rem;
-  font-weight: 500;
-`;
-
 const PersonPromoContainer = styled.div`
   display: flex;
   gap: 1rem;
@@ -68,13 +52,10 @@ const LastTalked = styled.span`
 
 export {
   StyledDailyBonds,
-  Heading,
-  SubHeading,
   PersonPromoContainer,
   PersonPromo,
   PersonPromoImage,
   PersonPromoName,
   PersonPromoDescription,
   LastTalked,
-  Header,
 };

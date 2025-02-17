@@ -1,25 +1,18 @@
 import React from 'react';
 import {
   StyledDailyBonds,
-  Heading,
-  SubHeading,
   PersonPromoContainer,
   PersonPromo,
   PersonPromoImage,
   PersonPromoName,
   PersonPromoDescription,
   LastTalked,
-  Header,
 } from './daily-bonds.style';
 import Button from '../Button/Button';
 
 const DailyBonds = () => {
   return (
     <StyledDailyBonds>
-      <Header>
-        <Heading>Daily Bonds</Heading>
-        <SubHeading>You have 4 important connections today</SubHeading>
-      </Header>
       <PersonPromoContainer>
         <PersonPromo>
           <PersonPromoImage src="/portraits/portrait-1.jpg" alt="Person" />
