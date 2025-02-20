@@ -9,16 +9,62 @@ const StyledDailyBonds = styled.div`
   padding: 1rem;
 `;
 
+const PersonPromoWrapper = styled.div`
+  transform: translateX(-10px);
+  position: relative;
+
+  &::before {
+    z-index: 10;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20px;
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1)
+    );
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 20px;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1)
+    );
+    pointer-events: none;
+  }
+`;
+
 const PersonPromoContainer = styled.div`
   display: flex;
   gap: 1rem;
   align-items: stretch;
   overflow-x: auto;
   padding: 1rem;
-  /* width: 100%; */
-  /* flex-wrap: nowrap; */
-  /* -webkit-overflow-scrolling: touch; */
-  scrollbar-width: none;
+  /* cursor: grab; */
+  /* user-select: none;
+  scroll-behavior: smooth;
+  -webkit-user-select: none;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; */
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const PersonPromo = styled.div`
@@ -90,6 +136,7 @@ const SubHeadingIconWrapper = styled.div`
 
 export {
   StyledDailyBonds,
+  PersonPromoWrapper,
   PersonPromoContainer,
   PersonPromo,
   PersonPromoImage,
