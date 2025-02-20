@@ -6,6 +6,9 @@ const StyledHomeLayout = styled.div`
   display: flex;
 `;
 
+const MainContent = styled.main`
+  flex-grow: 1;
+  overflow: hidden;
+`;
 
-
-export { StyledHomeLayout };
+export { StyledHomeLayout, MainContent };

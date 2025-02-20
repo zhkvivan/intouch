@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from '../components/Sidebar/Sidebar';
-import { StyledHomeLayout } from './home-layout.style';
+import { MainContent, StyledHomeLayout } from './home-layout.style';
 import DailyBonds from '../components/daily-bonds/daily-bonds';
 import Header from '../components/header/header';
 
@@ -12,11 +12,11 @@ const Layout = ({ children }: HomeLayoutProps) => {
   return (
     <StyledHomeLayout>
       <Sidebar />
-      <div>
+      <MainContent>
         <Header />
         <DailyBonds />
         {children}
-      </div>
+      </MainContent>
     </StyledHomeLayout>
   );
 };

@@ -10,8 +10,9 @@ const StyledHeader = styled.header`
 `;
 
 const StyledHeaderTitle = styled.h1`
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
+  font-family: var(--font-readex-pro);
 `;
 
 const SubHeading = styled.h2`

@@ -13,26 +13,39 @@ const PersonPromoContainer = styled.div`
   display: flex;
   gap: 1rem;
   align-items: stretch;
+  overflow-x: auto;
+  padding: 1rem;
+  /* width: 100%; */
+  /* flex-wrap: nowrap; */
+  /* -webkit-overflow-scrolling: touch; */
+  scrollbar-width: none;
 `;
 
 const PersonPromo = styled.div`
-  flex: 0 0 30%;
+  flex: 0 0 auto;
+  width: 280px;
+  height: 150px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 1rem;
   background-color: white;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  height: 100%;
-  justify-content: space-between;
+  position: relative;
 `;
 
 const PersonPromoImage = styled.img`
-  width: 100%;
+  max-width: 70px;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50%;
+`;
+
+const PersonDetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 `;
 
 const PersonPromoName = styled.h3`
@@ -45,9 +58,34 @@ const PersonPromoDescription = styled.p`
   font-weight: 300;
 `;
 
-const LastTalked = styled.span`
+const Data = styled.span`
   font-size: 0.8rem;
   font-weight: 300;
+  position: absolute;
+  background-color: #008a46;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  top: 1rem;
+  right: 1rem;
+`;
+
+const SubHeadingWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #008a46;
+`;
+
+const SubHeadingText = styled.span`
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: var(--font-readex-pro);
+`;
+
+const SubHeadingIconWrapper = styled.div`
+  width: 2rem;
+  height: 2rem;
 `;
 
 export {
@@ -57,5 +95,9 @@ export {
   PersonPromoImage,
   PersonPromoName,
   PersonPromoDescription,
-  LastTalked,
+  Data,
+  SubHeadingWrapper,
+  SubHeadingText,
+  SubHeadingIconWrapper,
+  PersonDetailsContainer,
 };
